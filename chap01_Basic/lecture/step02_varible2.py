@@ -42,4 +42,52 @@ var1 = 1
 # 변수에 값을 넣는것은 = 하나로 여러게 변수를 생성 가능하고 변수명과 저장될 값들은 순서대로 저장된다
 v1, v2 = 100, 200
 print(v1, v2)
+# 이 작업 설명을 순서대로 저장된다고 했지만 여기서 순서대로라는것은 방향성만 갖고 시간의 의미는 없다
+# 순서대로 라는 의미를 위해 다음 작업을 해보자
 
+v1, v2 = v2, v1
+# 위 작업에 순서대로가 시간의 의미까지 포함된다면 v1에 v2 값이 저장되고 v2에 v2가 저장된 v1값이 반영되어야 한다는 의미이다
+# 하지만
+print(v1, v2)  # 200, 100
+# 결과에 따르면 v2가 저장되지 않은 v1값이 v2에 반영이 되어있다.
+# 방향성은 있지만 동시에 작업을 하는 것!!
+
+# 2. 연산자 : 산술, 관계, 논리
+num1 = 100
+num2 = 50  # 이 두 변수를 통해 여러 계산을 해보자
+
+# 2.1 사칙연산
+add = num1 + num2
+mnus = num1 - num2
+mult = num1 * num2
+div = num1 / num2
+
+# 2.2
+div2 = num1 // num2 # 몫을 구할때는 // 을 이용한다
+div3 = num1 % num2  # 나머지 값을 구할때는 % 를 이용한다
+square = num1**2  # 제곱을 할때는 ** 를 이용한다
+# num1^2 은 R에서 사용한다
+
+print(add, mnus, mult)
+print(div, div2, div3)
+print(square)
+
+
+# 3. 관계 연산자
+# 1) 동등비교
+bool_re = num1 == num2
+print(bool_re)
+
+bool_re = num1 != num2
+print(bool_re)
+
+# 2) 대소관계 : >, >=, <, <=
+bool_re = num1 >= num2
+print(bool_re)
+
+print("논리 연산자")  # or, and, not
+bool_re = num1 <= num2 or num1 <= 10
+print(bool_re)  # False
+
+bool_re = num2 <= num1 <= 10
+print(bool_re)  # False
