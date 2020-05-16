@@ -31,21 +31,9 @@ B형 문) 항공사에서는 짐을 부칠 때, 10kg 이상 부터 수수료를 
 짐의 무게는 얼마입니까? 21
 수수료는 20,000원 입니다. 
 '''
-w = float(input("짐의 무게는 얼마입니까? (단위: kg) : "))
+w = int(input("짐의 무게는 얼마입니까? :"))
 if w >= 10:
     price = (w // 10) * 10000
-    print(price)
-    print('수수료는 ' + format(int(price), '3,d') + '입니다.')
-else:
-    print("수수료는 없습니다.")
-
-'''
-
-'''
-w = float(input("짐의 무게는 얼마입니까? (단위: kg) : "))
-if w > 0:
-    price = (w // 1) + 1
-    fee = price * 10000
-    print('수수료는 ' + format(int(fee), '3,d') + '입니다.')
+    print('수수료는 ' + format(price, '3,d') + '입니다.')
 else:
     print("수수료는 없습니다.")
