@@ -44,7 +44,18 @@ vector 수 : 3
 NO
 """
 
-if int(input()) in lst:
-    print('yes')
-else:
-    print('no')
+def random_vecf():
+    random_vec = []
+    n = int(input('생성할 벡터의 수'))
+    print('vector의 수 :', n)
+    for i in list(range(n)):
+        random_vec.append(random.randint(min(list(range(n))), max(list(range(n)))))
+
+    print(random_vec)
+
+    if int(input('찾고자하는 수')) in random_vec:
+        print('yes')
+    else:
+        print('no')
+
+random_vecf()

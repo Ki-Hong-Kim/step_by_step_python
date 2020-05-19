@@ -10,12 +10,13 @@ step04, 05 문제
 """
 
 position = ['과장', '부장', '대리', '사장', '대리', '과장']
+print(type(position))
 # 문1
 position2 = set(position)
-print(position2, type(position2))
+print(position2, type(position2)) # set
 
 # 문2 - 1
-lev = {}
+lev = {} # dict
 for i in position:
     if i in lev:
         lev[i] += 1
@@ -25,5 +26,5 @@ print(lev)
 
 lev = {}
 for i in position:
-    lev[i] = lev.get(i, 0) + 1
+    lev[i] = lev.get(i, 0) + 1 # lev.get(key값, 없다면 0 만약 키값이 있다면 0은 의미 없는 숫자로 바뀜)
 print(lev)
