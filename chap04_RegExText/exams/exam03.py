@@ -22,6 +22,7 @@ for p in person.split('\n'):
         print(jumin)
         jumin2 = jumin[:10]+"-*******"
         print(jumin2)
+
 result[0]
 print(jumin)
 
